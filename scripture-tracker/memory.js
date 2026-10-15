@@ -6,7 +6,7 @@ function addVerse(reference, text){
         reference,
         text,
          memorized: false
-    }
+    };
     verses.push(verseObject);
     nextId++;
     return verseObject;
@@ -14,3 +14,17 @@ function addVerse(reference, text){
 console.log(addVerse("Psalm 46:1", "God is our refuge and strength, an ever-present help in trouble."));
 console.log(addVerse("Jer 29:11", "For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future."));
 console.log(verses.length)
+
+function getReference(index) {
+    if (index < 0 || index >= verses.length) {
+        return "NOT FOUND";
+    } 
+    else {
+        return verses[index].reference;
+    }
+}
+
+console.log(getReference(0));
+console.log(getReference(1));
+console.log(getReference(2));
+console.log(getReference(-1));
