@@ -25,6 +25,14 @@ function getReference(index) {
 }
 
 console.log(getReference(0));
-console.log(getReference(1));
 console.log(getReference(2));
-console.log(getReference(-1));
+function markMemorized(index) {
+  if (index < 0 || index >= verses.length) {
+    return "NOT FOUND";
+  }
+  verses[index].memorized = true;
+  return verses[index];
+}
+console.log(markMemorized(10));
+markMemorized(0);
+console.log(verses);
