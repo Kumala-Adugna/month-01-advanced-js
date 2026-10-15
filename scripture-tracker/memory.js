@@ -56,3 +56,15 @@ function getRandomVerse() {
 }
 console.log(describeVerse(getRandomVerse()));
 console.log(describeVerse(getRandomVerse()));
+
+function maskLastWord(text) {
+   let sample = text;
+   console.log(sample.length);
+   const lastSpaceIndex = sample.lastIndexOf(" ");
+   const firstPart = sample.substring(0, lastSpaceIndex);
+   console.log(firstPart);
+   console.log("_".repeat(sample.length - lastSpaceIndex - 1));
+   const maskedText = firstPart + " " + "_".repeat(sample.length - lastSpaceIndex - 1);
+   return maskedText;
+}
+console.log(maskLastWord(verses[0].text));
