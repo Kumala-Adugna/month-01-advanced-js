@@ -36,3 +36,15 @@ function markMemorized(index) {
 console.log(markMemorized(10));
 markMemorized(0);
 console.log(verses);
+
+function describeVerse(verse) {
+   return { id: verse.id, reference: verse.reference };
+   let label;
+   if (verse.memorized) {
+        label = "memorized";
+    } else {
+        label = "learning";
+ }
+    return { id: verse.id, reference: verse.reference, label };
+}
+console.log(describeVerse(verses[0]));
