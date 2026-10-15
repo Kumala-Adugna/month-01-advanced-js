@@ -48,3 +48,11 @@ function describeVerse(verse) {
     return { id: verse.id, reference: verse.reference, label };
 }
 console.log(describeVerse(verses[0]));
+function getRandomVerse() {
+    const min = 0;
+    const max = verses.length - 1;
+    const randomIndex = Math.floor(Math.random() * (max - min + 1)) + min;
+    return verses[randomIndex];
+}
+console.log(describeVerse(getRandomVerse()));
+console.log(describeVerse(getRandomVerse()));
