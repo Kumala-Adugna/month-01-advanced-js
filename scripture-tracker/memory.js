@@ -1,0 +1,2 @@
+const verses;
+let nextId;
